@@ -1,6 +1,10 @@
-module challe3 {
+module com.example.chapter4challenge1 {
     requires javafx.controls;
-    requires javafx.graphics;
+    requires javafx.fxml;
 
-    exports challe3;
+    requires org.controlsfx.controls;
+    requires org.kordamp.bootstrapfx.core;
+
+    opens com.example.chapter4challenge1 to javafx.fxml;
+    exports com.example.chapter4challenge1;
 }
