@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package cha;
+
+
+public class C1 {
+    public static void main(String[] args) {
+        int number = 13579;
+
+        // Calculate number of digits
+        int numDigits = (int) Math.log10(number);
+
+        // Extract digits using mathematical operations
+        int firstDigit = (int) (number / Math.pow(10, numDigits));
+        int lastDigit = number % 10;
+        int secondDigit = (int) (number / Math.pow(10, numDigits - 1)) % 10;
+        int secondLastDigit = (number / 10) % 10;
+
+        // Perform calculations
+        int product = firstDigit * lastDigit;
+        int sum = secondDigit + secondLastDigit;
+
+        // Create final decrypted code
+        String decryptedCode = Integer.toString(product) + Integer.toString(sum);
+
+        // Output result
+        System.out.println("The decrypted code is: " + decryptedCode);
+    }
+}
+
+
+    
+
